@@ -28,7 +28,7 @@ def _get_valid_axes(
     ndim: Optional[int] = None,
     axes: Optional[Union[str, list[str], list[dict[str, str]]]] = None,
     fmt: Format = CurrentFormat(),
-) -> Union[None, list[str], list[dict[str, str]]]:
+) -> Union[list[str], list[dict[str, str]], None]:
     """Returns list of axes valid for fmt.version or raise exception if invalid"""
 
     if fmt.version in ("0.1", "0.2"):
