@@ -249,7 +249,7 @@ Please use the 'storage_options' argument instead."""
 
         if isinstance(data, da.Array):
             if chunks_opt is not None:
-                data = da.array(data).rechunk(chunks=chunks_opt)
+                data = da.array(data).rechunk(chunks=chunks_opt)  # noqa: PLW2901
                 options["chunks"] = chunks_opt
             da_delayed = da.to_zarr(
                 arr=data,
