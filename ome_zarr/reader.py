@@ -347,7 +347,7 @@ class OMERO(Spec):
 
             try:
                 len(channels)
-            except Exception:
+            except TypeError:
                 LOGGER.warning("error counting channels: %s", channels)
                 return  # EARLY EXIT
 
